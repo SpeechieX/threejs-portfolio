@@ -1,25 +1,55 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useRef, useState, useEffect } from "react";
+import { Canvas, useFrame } from "@react-three/fiber";
+import { NavigationContext } from "./contexts";
+import { Header, Footer, TitleLogo } from "./components";
+import { Portfolio, AboutMe, Contact } from "./pages";
+import { Box } from "./components/3DComponents";
 
-function App() {
+import "./App.css";
+
+const titles = ["Home", "Projects", "About", "Contact"];
+
+export default function App(props) {
+  const [page, setPage] = useState(`Home`);
+
+  const navigateWithParams = (title) => {
+    setPage(`${title}`);
+    console.log(title);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <NavigationContext.Provider value={page}>
+      <div className="App">
+        <TitleLogo />
+        {page === `Home` ? (
+          <div className="canvas_wrapper">
+            <Canvas>
+              <ambientLight />
+              <pointLight position={[10, 10, 10]} />
+              <Box position={[0, 0, 0]} />
+            </Canvas>
+          </div>
+        ) : page === `About` ? (
+          <AboutMe />
+        ) : page === `Projects` ? (
+          <Portfolio />
+        ) : page === `Contact` ? (
+          <Contact />
+        ) : (
+          <h1>Loading..</h1>
+        )}
+        <div className="Header">
+          {titles.map((title) => (
+            <h3
+              className="navigation_links"
+              onClick={() => navigateWithParams(title)}
+            >
+              {title}
+            </h3>
+          ))}
+        </div>
+        <Footer />
+      </div>
+    </NavigationContext.Provider>
   );
 }
-
-export default App;

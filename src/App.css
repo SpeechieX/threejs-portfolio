@@ -1,129 +1,144 @@
 @font-face {
-  font-family: "Bungee Hairline";
-  font-display: swap;
-  src: local(""), url("/public/assets/BungeeHairline-Regular.ttf");
+	font-family: "Bungee Hairline";
+	font-display: swap;
+	src: local(""), url("/public/assets/BungeeHairline-Regular.ttf");
 }
 
 * {
-  color: white;
-  font-family: "Bungee Hairline", cursive;
+	color: white;
+	font-family: "Bungee Hairline", cursive;
+	padding: 0;
 }
 
 body {
-  background-color: #606060;
+	background-color: #606060;
 }
 
 .App {
-  text-align: center;
-  background-color: #606060;
-  height: 90vh;
+	text-align: center;
+	background-color: #606060;
+	height: 90vh;
 }
 
 .Header {
-  background-color: #606060;
-  display: flex;
-  justify-content: center;
+	background-color: #606060;
+	display: flex;
+	justify-content: center;
 }
 
 .navigation_links {
-  margin-left: 15px;
-  margin-right: 5px;
-  font-family: "Bungee Hairline", cursive;
-  cursor: pointer;
+	margin-left: 15px;
+	margin-right: 5px;
+	font-family: "Bungee Hairline", cursive;
+	cursor: pointer;
 }
 .hovered_link {
-  margin-left: 15px;
-  margin-right: 5px;
-  font-family: "Bungee Hairline", cursive;
-  cursor: pointer;
-  color: blue;
+	margin-left: 15px;
+	margin-right: 5px;
+	font-family: "Bungee Hairline", cursive;
+	cursor: pointer;
+	color: blue;
 }
 
 .footer_container {
-  /* background-color: #606060; */
-  bottom: 0;
+	/* background-color: #606060; */
+	bottom: 0;
 }
 
 @keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 .canvas_wrapper {
-  height: 60vh;
-  animation: fadeIn 2s;
+	height: 60vh;
+	animation: fadeIn 2s;
 }
 
 .contact_container {
-  display: flex;
-  height: 60vh;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	height: 60vh;
+	justify-content: center;
+	align-items: center;
 }
 
 .AboutContainer {
-  height: 60vh;
-  justify-content: center;
-  align-items: center;
-  padding-top: 30px;
+	height: 60vh;
+	justify-content: center;
+	align-items: center;
+	padding-top: 30px;
 }
 
 .bio_content {
-  width: 600px;
-  margin: 0 auto;
-  color: #fff;
-  z-index: 3;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  animation: fadeIn 2s;
+	width: 600px;
+	margin: 0 auto;
+	color: #fff;
+	z-index: 3;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	animation: fadeIn 2s;
 }
 
 .segment-title {
 }
 
 .threebox {
-  border: 1px solid white;
+	border: 1px solid white;
 }
 
 .para-segment-l {
-  border: 1px solid yellow;
-  flex-direction: column;
-  text-align: left;
+	border: 1px solid yellow;
+	flex-direction: column;
+	text-align: left;
 }
 
 .accordion_title {
-  border: 1px solid purple;
-  background-color: transparent;
-  text-align: left;
+	border: 1px solid purple;
+	background-color: transparent;
+	text-align: left;
 }
 .acc_body {
-  border: 1px solid red;
-  margin: 0 auto;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  width: 60vw;
+	border: 1px solid red;
+	margin: 0 auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 60vw;
 }
 .acc_card_body {
-  border: 1px solid orange;
-  margin-top: 10px;
-  margin-bottom: 10px;
+	border: 1px solid orange;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 .accordion_list_item {
-  /* border: 1px solid blue; */
-  margin-top: 15px;
-  margin-bottom: 15px;
+	/* border: 1px solid blue; */
+	margin-top: 15px;
+	margin-bottom: 15px;
 }
 
 .project {
-  height: 300px;
-  width: 300px;
-  border: 1px solid white;
-  border-radius: 12.5px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+	width: 85vw;
+	border: 1px solid white;
+	margin: 0 auto;
+	text-align: left;
+	padding-left: 25px;
+}
+
+.project_container {
+}
+.resume_entry {
+	height: 20px;
+	font-family: "Courier New", Courier, monospace;
+}
+.project_title {
+}
+.project_project {
+}
+.project_detail {
+}
+.project_info {
 }

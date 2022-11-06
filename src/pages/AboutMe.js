@@ -4,8 +4,8 @@ export default function AboutMe() {
   return (
     <div className="AboutContainer">
       <div className="bio_title">
-        <h1>Erik HR</h1>
-        <h4>Creative, Visionary</h4>
+        <h1 className="bio_name">Erik HR</h1>
+        <h4 className="bio_name">Creative, Visionary</h4>
       </div>
       <h5 className="bio_content">
         Lorem Ipsum is simply dummy text of the printing and typesetting

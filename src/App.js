@@ -30,9 +30,13 @@ export default function App(props) {
             </Canvas>
           </div>
         ) : page === `About` ? (
-          <AboutMe />
+          <div className="about_container">
+            <AboutMe />
+          </div>
         ) : page === `Projects` ? (
-          <Portfolio />
+          <div className="portfolio_container">
+            <Portfolio />
+          </div>
         ) : page === `Contact` ? (
           <Contact />
         ) : (

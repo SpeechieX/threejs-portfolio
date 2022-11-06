@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
-import { useFrame } from "@react-three/fiber";
+import { Canvas, useFrame } from "@react-three/fiber";
 
-export default function Box(props) {
+function Box(props) {
   const mesh = useRef(null);
   const [hovered, setHover] = useState(false);
   const [active, setActive] = useState(false);
@@ -18,11 +18,23 @@ export default function Box(props) {
       onPointerOver={(event) => setHover(true)}
       onPointerOut={(event) => setHover(false)}
     >
-      <boxGeometry args={[3, 3, 3, 9, 9, 9]} />
+      <boxGeometry args={[0.7, 0.7, 0.7]} />
       <meshStandardMaterial
-        color={hovered ? "rgb(78, 188, 124)" : "white"}
+        color={hovered ? "hotpink" : "white"}
         wireframe={true}
       />
     </mesh>
+  );
+}
+
+export default function MiniBox(props) {
+  return (
+    <div className="minibox_div">
+      <Canvas>
+        <ambientLight />
+        <pointLight position={[10, 10, 10]} />
+        <Box position={[0, 0, 0]} />
+      </Canvas>
+    </div>
   );
 }

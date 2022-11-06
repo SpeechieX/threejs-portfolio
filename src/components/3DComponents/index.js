@@ -1,3 +1,4 @@
 import Box from "./Box";
+import MiniBox from "./MiniBox";
 
-export { Box };
+export { Box, MiniBox };

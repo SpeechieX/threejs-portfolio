@@ -1,144 +1,184 @@
 @font-face {
-	font-family: "Bungee Hairline";
-	font-display: swap;
-	src: local(""), url("/public/assets/BungeeHairline-Regular.ttf");
+  font-family: "Bungee Hairline";
+  font-display: swap;
+  src: local(""), url("/public/assets/BungeeHairline-Regular.ttf");
+}
+@font-face {
+  font-family: "Inconsolata";
+  font-display: swap;
+  src: local(""), url("/public/assets/Inconsolata-VariableFont_wdth\,wght.ttf");
 }
 
 * {
-	color: white;
-	font-family: "Bungee Hairline", cursive;
-	padding: 0;
+  color: white;
+  padding: 0;
 }
 
 body {
-	background-color: #606060;
+  background-color: #606060;
+}
+
+.title_logo,
+.footer_text,
+.contact_text,
+.bio_name,
+.navigation_links,
+.hovered_link,
+.project_title {
+  font-family: "Bungee Hairline", cursive;
+}
+
+.bio_content,
+.resume_entry,
+.project_detail,
+.project_info,
+.project_tools,
+.project_project {
+  font-family: "Inconsolata", monospace;
 }
 
 .App {
-	text-align: center;
-	background-color: #606060;
-	height: 90vh;
+  text-align: center;
+  background-color: #606060;
+  height: 90vh;
 }
 
 .Header {
-	background-color: #606060;
-	display: flex;
-	justify-content: center;
+  background-color: #606060;
+  display: flex;
+  justify-content: center;
 }
 
 .navigation_links {
-	margin-left: 15px;
-	margin-right: 5px;
-	font-family: "Bungee Hairline", cursive;
-	cursor: pointer;
+  margin-left: 15px;
+  margin-right: 5px;
+  cursor: pointer;
 }
+
 .hovered_link {
-	margin-left: 15px;
-	margin-right: 5px;
-	font-family: "Bungee Hairline", cursive;
-	cursor: pointer;
-	color: blue;
+  margin-left: 15px;
+  margin-right: 5px;
+  cursor: pointer;
 }
 
 .footer_container {
-	/* background-color: #606060; */
-	bottom: 0;
+  /* background-color: #606060; */
+  bottom: 0;
 }
 
 @keyframes fadeIn {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .canvas_wrapper {
-	height: 60vh;
-	animation: fadeIn 2s;
+  height: 60vh;
+  animation: fadeIn 2s;
 }
 
 .contact_container {
-	display: flex;
-	height: 60vh;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  height: 60vh;
+  justify-content: center;
+  align-items: center;
 }
 
 .AboutContainer {
-	height: 60vh;
-	justify-content: center;
-	align-items: center;
-	padding-top: 30px;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
 }
 
 .bio_content {
-	width: 600px;
-	margin: 0 auto;
-	color: #fff;
-	z-index: 3;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	animation: fadeIn 2s;
+  width: 600px;
+  margin: 0 auto;
+  color: #fff;
+  z-index: 3;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  animation: fadeIn 2s;
 }
 
 .segment-title {
 }
 
 .threebox {
-	border: 1px solid white;
+  border: 1px solid white;
 }
 
 .para-segment-l {
-	border: 1px solid yellow;
-	flex-direction: column;
-	text-align: left;
+  border: 1px solid yellow;
+  flex-direction: column;
+  text-align: left;
 }
 
 .accordion_title {
-	border: 1px solid purple;
-	background-color: transparent;
-	text-align: left;
-}
-.acc_body {
-	border: 1px solid red;
-	margin: 0 auto;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	width: 60vw;
-}
-.acc_card_body {
-	border: 1px solid orange;
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-
-.accordion_list_item {
-	/* border: 1px solid blue; */
-	margin-top: 15px;
-	margin-bottom: 15px;
+  border: 1px solid purple;
+  background-color: transparent;
+  text-align: left;
 }
 
 .project {
-	width: 85vw;
-	border: 1px solid white;
-	margin: 0 auto;
-	text-align: left;
-	padding-left: 25px;
+  width: 85vw;
+  margin: 0 auto;
+  text-align: left;
+  padding-left: 25px;
+}
+
+.portfolio_container {
+  margin: 0 auto;
+  animation: fadeIn 2s;
+}
+
+@media screen and (min-width: 800px) {
+  .project_container {
+    display: flex;
+    margin: 0 auto;
+    width: 700px;
+    flex-direction: row;
+  }
+}
+
+.minibox_column {
+  width: 20px;
+  margin-bottom: 170px;
+}
+
+.minibox_div {
+  /* border: 1px solid green; */
+  width: 30px;
+  height: 100px;
 }
 
 .project_container {
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid yellow; */
 }
 .resume_entry {
-	height: 20px;
-	font-family: "Courier New", Courier, monospace;
+  height: 30px;
 }
 .project_title {
+  font-weight: 800;
+  color: rgb(255, 255, 255);
 }
 .project_project {
+  font-weight: 800;
 }
 .project_detail {
+  font-weight: 200;
 }
 .project_info {
+  width: 600px;
+  font-weight: 200;
+}
+
+.project_tools {
+  color: rgb(78, 188, 124);
 }

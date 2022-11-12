@@ -1,45 +1,36 @@
 import React, { useState, useEffect } from "react";
+import { about } from "../components/Data";
 
 export default function AboutMe() {
-  return (
-    <div className="AboutContainer">
-      <div className="bio_title">
-        <h1 className="bio_name">Erik HR</h1>
-        <h4 className="bio_name">Creative, Visionary</h4>
-      </div>
-      <h5 className="bio_content">
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book. It has survived not only five
-        centuries, but also the leap into electronic typesetting, remaining
-        essentially unchanged. It was popularised in the 1960s with the release
-        of Letraset sheets containing Lorem Ipsum passages, and more recently
-        with desktop publishing software like Aldus PageMaker including versions
-        of Lorem Ipsum.
-      </h5>
-      <h5 className="bio_content">
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book. It has survived not only five
-        centuries, but also the leap into electronic typesetting, remaining
-        essentially unchanged. It was popularised in the 1960s with the release
-        of Letraset sheets containing Lorem Ipsum passages, and more recently
-        with desktop publishing software like Aldus PageMaker including versions
-        of Lorem Ipsum.
-      </h5>
-      <h5 className="bio_content">
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book. It has survived not only five
-        centuries, but also the leap into electronic typesetting, remaining
-        essentially unchanged. It was popularised in the 1960s with the release
-        of Letraset sheets containing Lorem Ipsum passages, and more recently
-        with desktop publishing software like Aldus PageMaker including versions
-        of Lorem Ipsum.
-      </h5>
-    </div>
-  );
+	return (
+		<div className="AboutContainer">
+			<div className="">
+				<h1 className="bio_name">Erik HR</h1>
+				<h4 className="bio_name">Creative, Visionary</h4>
+			</div>
+			<div className="flex_container">
+				<div class="row">
+					<div class="stack">
+						<h5 className="bio_content">{about[0].heading}</h5>
+						<h5 className="bio_desc">{about[0].description}</h5>
+					</div>
+					<div class="stack">
+						<h5 className="bio_content">{about[1].heading}</h5>
+						<h5 className="bio_desc">{about[1].description}</h5>
+					</div>
+				</div>
+				<div class="row">
+					<div class="stack">
+						<h5 className="bio_content">{about[2].heading}</h5>
+						<h5 className="bio_desc">{about[2].description}</h5>
+						<h5 className="bio_desc_hl">{about[2].extra}</h5>
+					</div>
+					<div class="stack">
+						<h5 className="bio_content">{about[3].heading}</h5>
+						<h5 className="bio_desc">{about[3].description}</h5>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
 }

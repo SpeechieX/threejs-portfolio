@@ -4,7 +4,7 @@ export const data = [
 		title: "United Nations",
 		project: "Ecosafe API",
 		location: "Democratic Republic of Laos",
-		info: "In partnership with the United Nations Development Program, I created an in-app toggle feature called “Ecosafe” allowing users to request plastic-free, sustainable packaging with their food delivery orders. The initiative also was used to enlighten citizens on sustainability methods and reducing plastic waste. ",
+		info: "In partnership with the United Nations Development Program, I created an in-app toggle feature called “Ecosafe” allowing users to request plastic-free, sustainable packaging with their food delivery orders. The data was used study which communities were more interested in sustainability and which methods were most effective for restuarant owners. ",
 		tools: "React-Native, Node, PubNub, MongoDB.",
 	},
 	{
@@ -12,7 +12,7 @@ export const data = [
 		title: "Bighead",
 		project: "OniRonin.io",
 		location: "Vancouver, British Columbia",
-		info: "Worked as the lead frontend developer for the current and second version of the OniRonin.io website, allowing users to mint and upgrade NFT’s from the OniRonin collection on the Ethereum Mainnet.",
+		info: "Served as the lead frontend developer for the current version of the OniRonin.io website, allowing users to mint and upgrade NFT’s from the OniRonin collection on the Ethereum Mainnet.",
 		tools: "Svelte, Truffle, Ethers, Hardhat, AWS.",
 	},
 	{
@@ -27,7 +27,7 @@ export const data = [
 	{
 		id: 4,
 		title: "Maruhan Japan Bank Lao",
-		project: "Checkout With Maruhan Payment Gateway for iOS",
+		project: "Checkout With Maruhan Payment Gateway for iOS + Android",
 		location: "Democratic Republic of Laos",
 		info: "Designed, Built and Tested Payment Integration for Maruhan Japan Bank Lao into the GoTeddy Application Framework.",
 		tools: "React-Native, Node.",
@@ -44,7 +44,7 @@ export const data = [
 
 export const about = [
 	{
-		heading: "",
+		heading: "Click Here for the SpeechieForPrez Blog.",
 		description:
 			"I was born in Detroit, Michigan, to a beautiful mother and father who showed me love and grace, and taught me that knowledge is the greatest asset to any person striving to acheive something in this world.",
 	},
@@ -73,3 +73,5 @@ export const about = [
 
 export const resumeLink =
 	"https://docs.google.com/document/d/1o8FoAZQqskYlvhiGFA5CHM0CNlXP6bIZFR0Kwpq0cFo/edit?usp=sharing";
+
+export const blogLink = "https://speechieforprez.com/blog";

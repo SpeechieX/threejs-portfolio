@@ -3,12 +3,12 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { NavigationContext } from "./contexts";
 import { Header, Footer, TitleLogo } from "./components";
 import { Portfolio, AboutMe, Contact } from "./pages";
-import { Box } from "./components/3DComponents";
-import { resumeLink } from "./components/Data";
+import { Box, MiniBox } from "./components/3DComponents";
+import { resumeLink, blogLink, about } from "./components/Data";
 
 import "./App.css";
 
-const titles = ["Home", "Projects", "About", "Contact"];
+const titles = ["Home", "Projects", "Contact"];
 
 export default function App(props) {
 	const [page, setPage] = useState(`Home`);
@@ -19,6 +19,7 @@ export default function App(props) {
 	};
 
 	const navigateToResume = async () => window.open(`${resumeLink}`);
+	const navigateToBlog = async () => window.open(`${blogLink}`);
 
 	return (
 		<NavigationContext.Provider value={page}>
@@ -38,9 +39,14 @@ export default function App(props) {
 					</div>
 				) : page === `Projects` ? (
 					<div className="portfolio_container">
-						<h4 className="resume_link" onClick={navigateToResume}>
-							Click Here for Resume
-						</h4>
+						{/* <h5 className="por_desc_hl" onClick={navigateToBlog}>
+							{about[0].heading}
+						</h5> */}
+						<div className="row">
+							{/* <h4 className="resume_link" onClick={navigateToResume}>
+								Download Resume
+							</h4> */}
+						</div>
 						<Portfolio />
 					</div>
 				) : page === `Contact` ? (

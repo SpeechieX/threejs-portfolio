@@ -27,11 +27,13 @@ body {
 .project_title {
 	font-family: "Bungee Hairline", cursive;
 	cursor: pointer;
+	color: white;
 }
 
 .bio_content,
 .bio_desc,
 .bio_desc_hl,
+.por_desc_hl,
 .resume_entry,
 .project_detail,
 .project_info,
@@ -45,6 +47,9 @@ body {
 	text-align: center;
 	background-color: #606060;
 	height: 90vh;
+	justify-content: center;
+	align-items: center;
+	padding-top: 30px;
 }
 
 .Header {
@@ -103,7 +108,7 @@ body {
 
 @media screen and (min-width: 800px) {
 	.flex_container {
-		display: flex;
+		/* display: flex; */
 		justify-content: center;
 		align-items: center;
 	}
@@ -114,9 +119,10 @@ body {
 }
 
 .stack {
-	display: block;
-	width: 400px;
+	/* display: block; */
+	/* width: 400px; */
 	margin: 0 auto;
+	margin-bottom: 10px;
 	color: #fff;
 	z-index: 3;
 	margin-top: 10px;
@@ -158,6 +164,19 @@ body {
 	animation: fadeIn 2s;
 	text-align: left;
 	inline-size: 300px;
+}
+.por_desc_hl {
+	width: 500px;
+	margin: 0 auto;
+	color: rgb(78, 188, 124);
+	z-index: 3;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	animation: fadeIn 2s;
+	text-align: center;
+	inline-size: 300px;
+	font-weight: 300;
+	cursor: pointer;
 }
 
 .segment-title {
@@ -269,15 +288,50 @@ body {
 		height: auto;
 	}
 
-	.project_info {
-		/* overflow: hidden; */
+	.project_info,
+	.project_detail {
 		inline-size: 300px;
+		font-weight: 500;
 		/* border: 1px solid orange; */
+	}
+
+	.project_title {
+		font-weight: 800;
 	}
 
 	.minibox_div {
 		display: none;
 	}
 
-	/* Project Screen  */
+	.title_logo {
+		font-size: 22px;
+	}
+
+	.contact_text {
+		font-size: 14px;
+	}
+
+	.minibox_column {
+		margin-bottom: 0px;
+	}
+
+	.bio_content,
+	.bio_desc,
+	.bio_desc_hl {
+		font-size: 14px;
+		font-weight: 300;
+	}
+
+	.project_tools {
+		inline-size: 300px;
+	}
+
+	.App {
+		/* border: 2px solid blue; */
+		max-width: 99vw;
+	}
+
+	.AboutContainer {
+		inline-size: min-content;
+	}
 }
